@@ -1,15 +1,15 @@
 # Northeastern-Transportation-System
-Project Scope:-
+# Project Scope:-
 
 The project intends to serve the Northeastern community by assisting students, faculty, and other community members to reach their destinations promptly and safely regardless of the time using different modes of transport viz. cabs, buses, trams, driving, cycle, or walking. Also, it introduces an extended attribute named Buddy walk which enables the user to find companions.
 
-Key Features:-
+# Key Features:-
 
 1.Safety precautions
 
 2.Buddy Walk
 
-Project Description:- 
+# Project Description:- 
 
 We are developing a transportation database system, specifically for the northeastern community,  where the source will be Northeastern University for the traveler to go to his desired location which will comprise (Restaurants, Banks, Grocery stores, Street Names, and Apartments).
 Once the location is determined, he will be able to see the mode of transportation to use, and accordingly, the time and route will be displayed in the database which will also include the street name and the percentage of crime rate on that street. This will be very helpful for commuters who are uncertain of which streets are safe or not, especially at night, so the safety parameter is distinct. The user can choose his or her route to the destination in accordance with it.
