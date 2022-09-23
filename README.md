@@ -4,8 +4,8 @@ Project Scope:-
 The project intends to serve the Northeastern community by assisting students, faculty, and other community members to reach their destinations promptly and safely regardless of the time using different modes of transport viz. cabs, buses, trams, driving, cycle, or walking. Also, it introduces an extended attribute named Buddy walk which enables the user to find companions.
 
 Key Features:-
-
 1.Safety precautions
+
 2.Buddy Walk
 
 Project Description:- 
