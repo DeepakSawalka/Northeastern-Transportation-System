@@ -5,8 +5,8 @@ The project intends to serve the Northeastern community by assisting students, f
 
 Key Features:-
 
-*Safety precautions
-2. Buddy Walk
+@Safety precautions
+@Buddy Walk
 
 Project Description:- 
 
