@@ -1,0 +1,90 @@
+CREATE TABLE `Tweet_Mentions` (
+  `tweet_id` Integer,FK,
+  `source` String,
+  `target_user` String
+);
+
+CREATE TABLE `MBTA` (
+  `tweet_id` Integer,FK,
+  `created_at` DateTime,
+  `tweet_text` String ,FK,
+  `location` String,
+  `followers_count` Integer,
+  `favourites_count` Integer,
+  `retweet_count` Integer,
+  `source` String,
+  `description` String,
+  `verified_account` boolean,
+  `status_count` Integer,
+  `user_account_created` DateTime,
+  `listed_counted ` Integer
+);
+
+CREATE TABLE `Uber` (
+  `tweet_id` Integer,FK,
+  `created_at` DateTime,
+  `tweet_text` String ,FK,
+  `user_name` String,
+  `followers_count` Integer,
+  `retweet_count` Integer,
+  `language` String,
+  `hastag` String,
+  `source` String,
+  `verified_account` boolean,
+  FOREIGN KEY (`tweet_text`) REFERENCES `Tweets`(`tweet_text`)
+);
+
+CREATE TABLE `LYFT ` (
+  `tweet_id` Integer,FK,
+  `created_at` DateTime,
+  `tweet_text` String ,FK,
+  `user_name` String,
+  `followers_count` Integer,
+  `retweet_count` Integer,
+  `language` String,
+  `hastag` String,
+  `source` String,
+  `verified_account` boolean
+);
+
+CREATE TABLE `RESULT(UBER_LYFT)` (
+  `tweet_id` Integer,FK,
+  `created_at` DateTime,
+  `tweet_text` String ,FK,
+  `user_name` String,
+  `followers_count` Integer,
+  `retweet_count` Integer,
+  `language` String,
+  `hastag` String,
+  `source` String,
+  `verified_account` boolean
+);
+
+CREATE TABLE `User` (
+  `tweet_id` Integer,PK,
+  `name` String ,
+  `description` String ,
+  `followers_count` Integer,
+  `friends_count` Integer,
+  FOREIGN KEY (`name`) REFERENCES `Tweet_Mentions`(`tweet_id`),
+  FOREIGN KEY (`tweet_id`) REFERENCES `MBTA`(`tweet_id`),
+  FOREIGN KEY (`tweet_id`) REFERENCES `Uber`(`tweet_id`),
+  FOREIGN KEY (`tweet_id`) REFERENCES `LYFT `(`tweet_id`),
+  FOREIGN KEY (`tweet_id`) REFERENCES `RESULT(UBER_LYFT)`(`tweet_id`)
+);
+
+CREATE TABLE `Tweets` (
+  `tweet_id` Integer,FK,
+  `tweet_text` String,PK,
+  `created_at` DateTime,
+  FOREIGN KEY (`tweet_id`) REFERENCES `User`(`tweet_id`),
+  FOREIGN KEY (`tweet_text`) REFERENCES `LYFT `(`tweet_text`),
+  FOREIGN KEY (`tweet_text`) REFERENCES `RESULT(UBER_LYFT)`(`tweet_text`),
+  FOREIGN KEY (`tweet_text`) REFERENCES `MBTA`(`tweet_text`)
+);
+
+CREATE TABLE `Tweet_Tags` (
+  `tweet_id` Integer,FK,
+  `tags` String,
+  FOREIGN KEY (`tweet_id`) REFERENCES `User`(`tweet_id`)
+);
