@@ -1,0 +1,21 @@
+Readme File of Assignment 3:
+
+Step 1: Searched for datasets related to the topic and finalized 2 datasets and web scraped using Browse AI
+
+https://github.com/kanguyn/Interactive-Data-Visualization-MBTA-airbnb/blob/master/data/mbta_metadata.csv
+https://www.kaggle.com/datasets/AnalyzeBoston/crimes-in-boston
+           
+
+Step 2: The datasets were cleaned as it includes null values and duplicate values and they needed to clean for further steps. These steps were done on Google collab.
+
+Step 3: The cleaned dataset was then further converted into a CSV file named “final4database”.
+
+Step 4: According to the dataset and creation of tables, ER diagram was prepared
+
+Step 5: Further the cleaned data CSV file was imported into SQL Workbench
+
+Step 6: The 20 sub-queries were implemented on SQL Workbench
+
+Step 7: After completing the queries, data visualization was implemented on the final dataset on Google Collab
+
+Step 8: granularity, Bar graphs, and Histograms have been produced on the basis of the final dataset
